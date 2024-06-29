@@ -1,16 +1,12 @@
-facebook:
-  label: Facebook
-  permalink: /facebook
-  description: Facebook tag description
-hello:
-  label: Hello
-  permalink: /hello
-  description: Hello tag description
-docusaurus:
-  label: Docusaurus
-  permalink: /docusaurus
-  description: Docusaurus tag description
-hola:
-  label: Hola
-  permalink: /hola
-  description: Hola tag description
+generic:
+  label: Generic
+  permalink: /generic
+  description: Generic content 
+android:
+  label: Android
+  permalink: /android
+  description: Android content global
+frameworks:
+  label: Frameworks
+  permalink: /frameworks
+  description: frameworks content

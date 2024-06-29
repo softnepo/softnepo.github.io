@@ -91,6 +91,7 @@ const config: Config = {
             {
               label: 'Blog',
               to: '/blog',
+              
             },
             {
               label: 'GitHub',
