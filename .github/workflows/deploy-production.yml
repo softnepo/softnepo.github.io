@@ -1,11 +1,11 @@
 name: Deploy Github pages in Production
 run-name: ${{ github.actor }} runner is job
 on:
-    push:
-      branches:
-        - release 
+ push:
+  branches:
+    - release 
  
-  jobs:
+jobs:
     deploy:
       runs-on: ubuntu-latest
   
