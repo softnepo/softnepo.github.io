@@ -59,7 +59,7 @@ jobs:
            echo "Preview website after moved"
            ls -a
            echo "Preview root after moved and rename"
-           la ../
+           ls ../
         
       - name: Setup Pages
         uses: actions/configure-pages@v5
