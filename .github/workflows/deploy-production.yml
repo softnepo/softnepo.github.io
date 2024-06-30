@@ -35,11 +35,16 @@ jobs:
   
         - name: Build site
           run: npm run build
-  
+        
+        - name: Create Archive
+          shell: sh
+          run: tar --dereference --hard-dereference --directory build -cvf release.tar --exclude=.git --exclude=.github .
+           
         - name: Upload Build Artifact
-          uses: actions/upload-pages-artifact@v3
+          uses: actions/upload-pages-artifact@v4
           with:
-            path: build
+            name: release
+            path: release.tar
             
     deploy:
        name: Deploy to GitHub Pages
