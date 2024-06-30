@@ -1,18 +1,18 @@
 name: Deploy Github pages in Production
-run-name: ${{ github.actor }} runner is job
+run-name: ${{ github.actor }} started deploy new version
 on:
  push:
   branches:
     - release 
  
 jobs:
-    deploy:
+    deploy_site:
       runs-on: ubuntu-latest
-  
-      steps:
-        - name: Change directory
-          run: cd website
+      defaults:
+        run:
+          working-directory: ./website
 
+      steps:
         - name: Checkout code
           uses: actions/checkout@v2
   
