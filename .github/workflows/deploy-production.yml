@@ -4,13 +4,12 @@ on:
  workflow_dispatch:
    inputs:
     deploy_options:
-      description: 'Deploy'
-        required: true
-        default: 'warning'
-        type: choice
-        options:
-          - START
-          - NONE
+       description: 'Deploy Production'
+       required: true
+       type: choice
+       options:
+         - START
+         - NONE
  
 jobs:
     deploy_site:
