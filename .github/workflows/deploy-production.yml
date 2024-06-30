@@ -36,6 +36,12 @@ jobs:
         - name: Build site
           run: npm run build
         
+          
+        - name: List files
+          run: ls -a
+        
+        - name: URL
+          run: echo ${{ steps.deployment.outputs.page_url }}
         # - name: Create Archive
         #  shell: sh
         #  run: tar --dereference --hard-dereference --directory build -cvf release.tar --exclude=.git --exclude=.github .
@@ -45,12 +51,6 @@ jobs:
           with:
             name: release
             path: build
-
-        - name: List files
-          run: ls -a
-        
-        - name: URL
-          run: echo ${{ steps.deployment.outputs.page_url }}
 
         - name: Deploy to GitHub Pages
           uses: actions/deploy-pages@v4
