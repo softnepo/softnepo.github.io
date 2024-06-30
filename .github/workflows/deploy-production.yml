@@ -41,7 +41,7 @@ jobs:
           run: tar --dereference --hard-dereference --directory build -cvf release.tar --exclude=.git --exclude=.github .
            
         - name: Upload Build Artifact
-          uses: actions/upload-pages-artifact@v4
+          uses: actions/upload-pages-artifact@main
           with:
             name: release
             path: release.tar
