@@ -1,9 +1,16 @@
 name: Deploy Github pages in Production
 run-name: ${{ github.actor }} started deploy new version
 on:
- push:
-  branches:
-    - release 
+ workflow_dispatch:
+   inputs:
+    deploy_options:
+      description: 'Deploy'
+        required: true
+        default: 'warning'
+        type: choice
+        options:
+          - START
+          - NONE
  
 jobs:
     deploy_site:
@@ -11,7 +18,7 @@ jobs:
       defaults:
         run:
           working-directory: ./website
-
+      if:  ${{ inputs.deploy_options == 'START' }}            
       steps:
         - name: Checkout code
           uses: actions/checkout@v2
