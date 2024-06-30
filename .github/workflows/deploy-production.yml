@@ -11,7 +11,7 @@ jobs:
   
       steps:
         - name: Change directory
-          run: cd website
+          run: cd ./website
 
         - name: Checkout code
           uses: actions/checkout@v2
