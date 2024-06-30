@@ -45,7 +45,13 @@ jobs:
           with:
             name: release
             path: build
-            
+
+        - name: List files
+          run: ls -a
+        
+        - name: URL
+          run: echo ${{ steps.deployment.outputs.page_url }}
+
         - name: Deploy to GitHub Pages
           uses: actions/deploy-pages@v4
           env:
