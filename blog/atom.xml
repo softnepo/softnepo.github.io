@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://www.softnepo.com/blog</id>
+    <title>Softnepo Blog</title>
+    <updated>2024-06-29T00:00:00.000Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://www.softnepo.com/blog"/>
+    <subtitle>Softnepo Blog</subtitle>
+    <icon>https://www.softnepo.com/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[Welcome softnepo]]></title>
+        <id>https://www.softnepo.com/blog/welcome</id>
+        <link href="https://www.softnepo.com/blog/welcome"/>
+        <updated>2024-06-29T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[---]]></summary>
+        <content type="html"><![CDATA[<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="why-this-blog-exist-">Why this blog exist ?<a class="hash-link" aria-label="Direct link to Why this blog exist ?" title="Direct link to Why this blog exist ?" href="https://www.softnepo.com/blog/welcome#why-this-blog-exist-">​</a></h2>
+<p>Softnep born to shared knowledge about tecnology, inspired to square where it share big quantity content and solutions open source know <a href="https://developer.squareup.com/blog/" target="_blank" rel="noopener noreferrer">Square</a></p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="expectative">Expectative<a class="hash-link" aria-label="Direct link to Expectative" title="Direct link to Expectative" href="https://www.softnepo.com/blog/welcome#expectative">​</a></h2>
+<p>Create an community to share content tech and create soluction open source with objective evolution and growth tecnical.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="get-to-know-some-project-open-source">Get to know some project open source<a class="hash-link" aria-label="Direct link to Get to know some project open source" title="Direct link to Get to know some project open source" href="https://www.softnepo.com/blog/welcome#get-to-know-some-project-open-source">​</a></h2>
+<ul>
+<li>
+<p><a href="https://github.com/softnepo/easy-logic" target="_blank" rel="noopener noreferrer">Easy Logic</a>
+Project open source to help android develop on create custom plugins mode easy</p>
+</li>
+<li>
+<p><a href="https://github.com/softnepo/easy-log" target="_blank" rel="noopener noreferrer">Easy Log</a>
+Library to logging on app android</p>
+</li>
+</ul>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="conclusion">Conclusion<a class="hash-link" aria-label="Direct link to Conclusion" title="Direct link to Conclusion" href="https://www.softnepo.com/blog/welcome#conclusion">​</a></h2>
+<p>In summary, this blog aims to foster a community where technology enthusiasts can share knowledge and collaborate on open-source projects. Inspired by platforms like <a href="https://developer.squareup.com/blog/" target="_blank" rel="noopener noreferrer">Square</a>, <a href="https://github.com/softnepo" target="_blank" rel="noopener noreferrer">Softnepo</a> is dedicated to providing valuable content and solutions to help developers grow and evolve technically. We encourage you to explore our open-source projects, such as <a href="https://github.com/softnepo/easy-logic" target="_blank" rel="noopener noreferrer">Easy Logic</a> and <a href="https://github.com/softnepo/easy-log" target="_blank" rel="noopener noreferrer">Easy Log</a>, and join us in our mission to create innovative and accessible tech solutions.</p>]]></content>
+        <author>
+            <name>Lucas Santos</name>
+            <uri>https://github.com/lnsantos</uri>
+        </author>
+        <category label="Generic" term="Generic"/>
+    </entry>
+</feed>
