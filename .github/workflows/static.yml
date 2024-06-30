@@ -49,6 +49,10 @@ jobs:
   
       - name: Build site
         run: npm run build
+
+      - name: rename
+        run: |
+           mv build _site
         
       - name: Setup Pages
         uses: actions/configure-pages@v5
@@ -58,8 +62,6 @@ jobs:
         
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
-        with:
-          path: 'build/.'
           
       - name: Deploy to GitHub Pages
         id: deployment
