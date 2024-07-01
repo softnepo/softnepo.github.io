@@ -46,7 +46,6 @@ jobs:
               **Observações:**
               > Iniciando validacao do build.
             pr_number: ${{ github.event.pull_request.number }}
-            token: ${{ github.token }}
 
         - name: Setup Node.js
           uses: actions/setup-node@v4
