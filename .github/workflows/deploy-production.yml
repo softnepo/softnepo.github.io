@@ -9,21 +9,45 @@ on:
       - synchronize
       - reopened
 
-permissions:
-  pull-requests: read
+permissions: write-all
  
 jobs:
+    PR:
+      runs-on: ubuntu-latest
+      steps:
+      - uses: actions/github-script@v6
+        with:
+          script: |
+            const pullRequest = context.payload.pull_request;
+            console.log(`O ID da PR é: ${pullRequest.id}`);
+
     build:
       runs-on: ubuntu-latest
       defaults:
         run:
           working-directory: ./website
       steps:
+
         - name: Checkout code
           uses: actions/checkout@v4
           with:
             fetch-depth: 0
-            
+
+        - name: Comment PR
+          uses: thollander/actions-comment-pull-request@v2
+          with:
+            comment_tag: |
+              **Comentário da Pull Request:**
+
+              * Autor: ${{ github.event.pull_request.user.login }}
+              * Branch: ${{ github.event.pull_request.head.ref }}
+              * Link para PR: ${{ github.event.pull_request.url }}
+
+              **Observações:**
+              > Iniciando validacao do build.
+            pr_number: ${{ github.event.pull_request.number }}
+            token: ${{ github.token }}
+
         - name: Setup Node.js
           uses: actions/setup-node@v4
           with:
@@ -32,12 +56,6 @@ jobs:
   
         - name: Install dependencies
           run: npm install
-          
-        - name: Comment PR
-          uses: thollander/actions-comment-pull-request@v2
-          with:
-            message: |
-              Init validation build ! :wave:
 
         - name: Build site
           id: buildTests
