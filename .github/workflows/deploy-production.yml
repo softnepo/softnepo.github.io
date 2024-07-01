@@ -9,14 +9,10 @@ on:
       - synchronize
       - reopened
 
-permissions:
-  contents: write
-  pull-requests: write
-  actions: write
+permissions: write-all
  
 jobs:
     PR:
-      name: PR data
       runs-on: ubuntu-latest
       steps:
       - uses: actions/github-script@v6
