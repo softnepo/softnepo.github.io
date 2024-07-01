@@ -10,7 +10,8 @@ on:
       - reopened
 
 permissions:
-  pull-requests: read
+  contents: write
+  pull-requests: write
  
 jobs:
     build:
@@ -23,6 +24,11 @@ jobs:
           uses: actions/checkout@v4
           with:
             fetch-depth: 0
+        - name: Comment PR
+          uses: thollander/actions-comment-pull-request@v2
+          with:
+            message: |
+              Init validation build ! :wave:
             
         - name: Setup Node.js
           uses: actions/setup-node@v4
@@ -32,12 +38,6 @@ jobs:
   
         - name: Install dependencies
           run: npm install
-          
-        - name: Comment PR
-          uses: thollander/actions-comment-pull-request@v2
-          with:
-            message: |
-              Init validation build ! :wave:
 
         - name: Build site
           id: buildTests

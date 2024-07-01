@@ -52,14 +52,7 @@ jobs:
 
       - name: Adjust to deploy
         run: |
-           echo "removing foulder to root" 
-           mv build ../
-           echo "renaming build to _site in root" 
-           mv ../build ../_site
-           echo "Preview website after moved"
-           ls -a
-           echo "Preview root after moved and rename"
-           ls ../
+           mv build _site
         
       - name: Setup Pages
         uses: actions/configure-pages@v5
