@@ -60,7 +60,6 @@ jobs:
           ls -a
           echo "Preview root after moved and rename"
           ls ../
-          mv build _site
         
       - name: Setup Pages
         uses: actions/configure-pages@v5
